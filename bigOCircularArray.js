@@ -8,6 +8,22 @@
 // Circular arr
 // Just console.log the output on each loop iteration
 
+const arr = [1, 2, 3, 4, 5];
+
+const circleArray = (arr, loopCount) => {
+    let i = 0;
+
+	while (i < arr.length * loopCount) {
+
+        console.log(i % arr.length)
+        i++;
+        if (i % arr.length === arr.length - 1) {
+            console.log('-------');
+        }
+    }
+};
+
+circleArray(arr, 3);
 
 const greets = ["hi", "hello", "hey"];
 
@@ -19,11 +35,10 @@ function circularArray(arr, numLoops) {
   // but "index" will always be bounded by the array length
   while (i < len * numLoops) {
     const index = i % len;
+
     console.log(arr[index]);
     i++;
     
     if (index === len - 1) console.log("---------");
   }
 }
-
-circularArray(greets, 3);
